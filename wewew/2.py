@@ -217,4 +217,4 @@ num = int(input('请输入一个正整数：'))
 if num % 2 == 0:
     print(f'{num}是双数！')
 else:
-    print(f'{num}是单数！')  
+    print(f'{num}是单数！')
