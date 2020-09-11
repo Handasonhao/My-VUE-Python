@@ -218,3 +218,6 @@ if num % 2 == 0:
     print(f'{num}是双数！')
 else:
     print(f'{num}是单数！')
+list_test = [1, 2, 3, 4]
+it = iter(list_test)
+print(next(it))
