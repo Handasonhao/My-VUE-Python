@@ -2,6 +2,7 @@
 import math
 import cmath
 import random
+# import sys
 input("按下enter键退出，其他任意键显示...\n")
 print('ok!')
 '''
@@ -104,10 +105,10 @@ while len(numbers) > 10:
 else:
     print("请检查数组！")
 print("even:", even, "odd:", odd)
-fruits = ['banana', 'apple', 'mango']
-for fruit in fruits:
+hjhjhj = ['banana', 'apple', 'mango']
+for fruit in hjhjhj:
     print("当前水果:", fruit)
-print(range(len(fruits)))
+print(range(len(hjhjhj)))
 print('再见')
 for num in range(10, 20):
     for i in range(2, num):
@@ -220,4 +221,51 @@ else:
     print(f'{num}是单数！')
 list_test = [1, 2, 3, 4]
 it = iter(list_test)
-print(next(it))
+for x in it:
+    print(x)
+# while True:
+#     try:
+#         print(next(it))
+#     except StopIteration:
+#         print('press ctrl+c!')
+#         sys.exit()
+# for rr in it:
+#     print(rr, end=" ")
+
+
+def fibonacc(n):
+    a, b, counter = 0, 1, 0
+    while True:
+        if (counter > n):
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
+
+
+# f = fibonacc(10)
+# while True:
+#     try:
+#         print(next(f), end=" ")
+#     except StopIteration:
+#         sys.exit()
+
+
+class Mynumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+
+
+myclass = Mynumbers()
+myiter = iter(myclass)
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+
