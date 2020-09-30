@@ -267,3 +267,48 @@ myiter = iter(myclass)
 print(next(myiter))
 print(next(myiter))
 print(next(myiter))
+
+
+def change(a):
+    print(id(a))
+    a = 10
+    print(id(a))
+
+
+a = 1
+print(id(a))
+change(a)
+
+
+def mychange(list):
+    list.append([1, 2, 3, 4])
+    print('函数内取值：', list)
+    return
+
+
+mylist = [10, 20, 30]
+mychange(mylist)
+print('函数外取值：', mylist)
+
+vec = [2, 4, 6]
+print("列表推导式1：", [3 * x for x in vec])
+print("列表推导式2：", [[2 * x, x**2] for x in vec])
+
+
+def deboule(num):
+    return num * 2
+
+
+veb = ['     b', 'a      b', 'b n', 'n             ']
+print("列表推导式3：", [deboule(x) for x in vec if x > 2])
+print("列表推导式4：", [x.strip() for x in veb])
+
+a, b = set('fasttgfsd'), set('asdasdasdhsadk')
+print(a, b)
+print(a | b)
+print(a & b)
+print(a ^ b)
+print({x for x in 'abracadabra' if x not in 'abcd'})
+
+vdsa = dict([('sape', 1), ('ggg', 2), ('jjj', 3)])
+print({k: v**2 for k, v in vdsa.items()})
