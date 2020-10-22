@@ -1,3 +1,11 @@
+/*
+ * @Author       : Wang.HH
+ * @Date         : 2020-10-22 14:20:18
+ * @LastEditTime : 2020-10-22 14:54:20
+ * @LastEditors  : Wang.HH
+ * @Description  : your description
+ * @FilePath     : /My-VUE-Python/Vue/element-ui/build/webpack.base.conf.js
+ */
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -34,7 +42,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
+      '@': resolve('src')
     }
   },
   module: {
@@ -44,6 +52,10 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
+      },
+      {
+        test: /\.scss$/,
+        loader: ['style', 'css', 'sass']
       },
       {
         test: /\.js$/,
