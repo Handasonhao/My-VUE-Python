@@ -1,7 +1,7 @@
 /*
  * @Author       : Wang.HH
  * @Date         : 2020-10-22 14:20:18
- * @LastEditTime : 2020-10-22 15:09:56
+ * @LastEditTime : 2020-10-29 13:50:13
  * @LastEditors  : Wang.HH
  * @Description  : your description
  * @FilePath     : /My-VUE-Python/Vue/element-ui/src/router/index.js
@@ -21,9 +21,21 @@ export default new Router({
       component: FirstPage
     },
     {
+      path: '/3333',
+      name: 'ThirdPage',
+      component: () => import('../pages/2/3.vue')
+    },
+    {
       path: '/2222',
       name: 'SecondPage',
-      component: () => import('../pages/2/2.vue')
+      component: () => import('../pages/2/2.vue'),
+      children: [
+        {
+          path: '3333',
+          name: 'ThirdPage',
+          component: () => import('../pages/2/3.vue')
+        }
+      ]
     }
   ]
 })

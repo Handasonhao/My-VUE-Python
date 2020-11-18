@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+import hgteaysg
 import math
 import cmath
 import random
@@ -304,7 +305,12 @@ print("列表推导式3：", [deboule(x) for x in vec if x > 2])
 print("列表推导式4：", [x.strip() for x in veb])
 
 a, b = set('fasttgfsd'), set('asdasdasdhsadk')
+c = [1, 2, 3, 4, 5]
+d = set([1, 1, 1, 2, 3, 3, 4])
 print(a, b)
+print(c[1:2])
+print([x for x in d])
+print({x for x in d})
 print(a | b)
 print(a & b)
 print(a ^ b)
@@ -312,3 +318,5 @@ print({x for x in 'abracadabra' if x not in 'abcd'})
 
 vdsa = dict([('sape', 1), ('ggg', 2), ('jjj', 3)])
 print({k: v**2 for k, v in vdsa.items()})
+
+hgteaysg.print_func('jjjj')
