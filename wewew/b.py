@@ -1,9 +1,10 @@
 # -*- coding: UTF-8 -*-
 import hgteaysg
+# from hgteaysg import print_func, fib
 import math
 import cmath
 import random
-# import sys
+import sys
 input("按下enter键退出，其他任意键显示...\n")
 print('ok!')
 '''
@@ -319,4 +320,32 @@ print({x for x in 'abracadabra' if x not in 'abcd'})
 vdsa = dict([('sape', 1), ('ggg', 2), ('jjj', 3)])
 print({k: v**2 for k, v in vdsa.items()})
 
+print(sys.path)
 hgteaysg.print_func('jjjj')
+hgteaysg.fib(100)
+# print(hgteaysg.fib2(1000))
+print(dir(hgteaysg))
+print(dir())
+print('hello\n')
+print(repr('hello\n'))
+print(str('hello\n'))
+for x in range(1, 11):
+    print(repr(x).rjust(2), repr(x * x).rjust(2), repr(x * x * x), end='&')
+    print(repr(x * x * x).rjust(4))
+    print(repr(x * x * x).rjust(4))
+
+table1 = {'Google': 1, 'Runoob': 2, 'Taobao': 3}
+table2 = {'Google': 4, 'Runoob': 5, 'Taobao': 6}
+print('G1:{0[Google]:d};G2:{1[Google]:d}'.format(table1, table2))
+# f = open("C:/Users/王浩浩/Desktop/11.txt", 'r', encoding='utf-8')
+with open("C:/Users/王浩浩/Desktop/11.txt", 'r', encoding='utf-8') as f:
+    print(f.tell())
+    stra = f.read()
+    print(stra)
+    # for line in f:
+    #     print(line, end='***')
+    words = stra.split()
+    print(words)
+    for word in list(set(words)):
+        print('{0} ：{1}'.format(word, words.count(word)))
+    print(f.tell())
