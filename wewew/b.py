@@ -349,3 +349,15 @@ with open("C:/Users/王浩浩/Desktop/11.txt", 'r', encoding='utf-8') as f:
     for word in list(set(words)):
         print('{0} ：{1}'.format(word, words.count(word)))
     print(f.tell())
+while True:
+    try:
+        x = int(input("请输入一个数字："))
+        print('{0}'.format(x))
+        break
+    except ValueError:
+        print('您输入的不是一个数字！')
+    # except:
+    #     # 此处是因为flake8的错误提示，为了规范代码写法的，
+    #     # 对运行没有影响，这样写的目的是为了可以在没考虑到的错误情况下直接输出错误问题
+    #     print("Unexcepted error:", sys.exc_info()[0])
+    #     raise  # 可以抛出异常问题
